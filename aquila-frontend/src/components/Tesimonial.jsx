@@ -1,6 +1,6 @@
 import React from "react";
-import icon from "../assets/icon.png";
-import stars from "../assets/stars.png";
+import icon from "../assets/Icon.png";
+import stars from "../assets/Stars.png";
 
 const Testimonial = () => {
   const data = [

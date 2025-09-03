@@ -4,7 +4,7 @@ import insta from "../assets/insta.png";
 import twitter from "../assets/twiter.png";
 import facebook from "../assets/facebook.png";
 import msg from "../assets/msg.png";
-import phone from "../assets/phone.png";
+import phone from "../assets/Phone.png";
 import location from "../assets/location.png";
 
 const Footer = () => {
