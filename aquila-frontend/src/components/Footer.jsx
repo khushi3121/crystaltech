@@ -15,7 +15,7 @@ const Footer = () => {
         
         {/* Logo + About + Socials */}
         <div className="flex flex-col space-y-6">
-          <h2 className="text-[36px] font-urbanist font-semibold leading-none">
+          <h2 className="text-[36px] font-urbanist font-semibold text-orange-500 leading-none">
             Aquila
           </h2>
           <p className="text-gray-300 text-sm leading-relaxed max-w-[260px]">

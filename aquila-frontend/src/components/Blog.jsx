@@ -34,19 +34,24 @@ const Blog = () => {
       {/* Blog Title */}
       <h2
         className="text-center text-orange-400 font-urbanist font-bold mb-10 text-3xl sm:text-4xl"
-        style={{
-          lineHeight: "1.2",
-        }}
+        style={{ lineHeight: "1.2" }}
       >
         Blog
       </h2>
 
-      {/* Blog Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 justify-items-center">
+      {/* Horizontal Scroll Container */}
+      <div className="flex gap-9  justify-center md:gap-8 overflow-x-auto scrollbar-hide px-2">
         {blogs.map((blog) => (
           <div
             key={blog.id}
-            className="w-full max-w-[380px] bg-white rounded-lg shadow-lg shadow-orange-500 overflow-hidden flex flex-col transform transition duration-300 hover:scale-105 hover:shadow-orange-600"
+            className="
+              flex-shrink-0 w-full max-w-[380px] bg-white rounded-lg overflow-hidden flex flex-col
+              transform transition duration-300
+              border border-orange-400
+              shadow-[0_5px_25px_rgba(255,69,0,0.5)] 
+              hover:shadow-[0_10px_40px_rgba(255,69,0,0.9)] 
+              hover:scale-105
+            "
           >
             {/* Blog Image */}
             <img
