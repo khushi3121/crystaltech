@@ -34,60 +34,76 @@ const Counting = () => {
   }, []);
 
   return (
-    <div className="w-full bg-[#172933] flex justify-center items-center py-16">
-      {/* 2 rows × 3 cols grid */}
-      <div className="grid grid-cols-3 grid-rows-2 w-[1200px] h-[538px] text-center relative">
+    <div className="w-full bg-[#172933] flex justify-center items-center py-12 sm:py-16">
+      {/* Fixed main slide size */}
+      <div className="grid grid-cols-3 grid-rows-2 w-[1200px] h-[538px] text-center relative px-6">
+        
         {/* 14+ */}
-        <div className="flex flex-col justify-center items-center row-start-1 col-start-1 space-y-2">
-          <span className="relative font-urbanist font-bold text-[64px] text-orange-500 leading-none w-[138px] h-[109px]">
-            {/* Back layer (shadow) */}
-            <span className="absolute left-[6px] top-[6px] text-gray-600">
+        <div className="flex flex-col justify-center items-center row-start-1 col-start-1 space-y-3">
+          <span className="relative font-urbanist font-bold 
+            text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[64px] 
+            text-orange-500 leading-none">
+            {/* Back shadow with safe offset */}
+            <span className="absolute left-[4px] top-[4px] text-gray-600">
               {counts[0]}+
             </span>
-            {/* Front layer */}
             <span className="relative">{counts[0]}+</span>
           </span>
-          <span className="text-white font-urbanist font-semibold text-[24px] leading-none w-[50vw] h-[29px]">
-            Years Experience
-          </span>
+<span className="text-white font-urbanist font-semibold 
+  text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 
+  leading-none px-[10px]">
+  Years Experience
+</span>
         </div>
 
         {/* 700+ */}
-        <div className="flex flex-col justify-center items-center row-start-1 col-start-2 space-y-2">
-          <span className="relative font-urbanist font-bold text-[64px] text-orange-500 leading-none w-[205px] h-[109px]">
-            <span className="absolute left-[20px] top-[6px] text-gray-600">
+        <div className="flex flex-col justify-center items-center row-start-1 col-start-2 space-y-3">
+          <span className="relative font-urbanist font-bold 
+            text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[64px] 
+            text-orange-500 leading-none">
+            <span className="absolute left-[4px] top-[4px] text-gray-600">
               {counts[1]}+
             </span>
             <span className="relative">{counts[1]}+</span>
           </span>
-          <span className="text-white font-urbanist font-semibold text-[24px] leading-none w-[50vw] h-[29px]">
+          <span className="text-white font-urbanist font-semibold 
+            text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-none">
             Completed Projects
           </span>
         </div>
 
         {/* 500+ */}
-        <div className="flex flex-col justify-center items-center row-start-2 col-start-2 space-y-2">
-          <span className="relative font-urbanist font-bold text-[64px] text-orange-500 leading-none w-[205px] h-[109px]">
-            <span className="absolute left-[20px] top-[5px] text-gray-600">
+        <div className="flex flex-col justify-center items-center row-start-2 col-start-2 space-y-3">
+          <span className="relative font-urbanist font-bold 
+            text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[64px] 
+            text-orange-500 leading-none">
+            <span className="absolute left-[4px] top-[4px] text-gray-600">
               {counts[2]}+
             </span>
             <span className="relative">{counts[2]}+</span>
           </span>
-          <span className="text-white font-urbanist font-semibold text-[24px] leading-none w-[186px] h-[29px]">
+          <span className="text-white font-urbanist font-semibold 
+            text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-none">
             Happy Clients
           </span>
         </div>
 
         {/* 20+ */}
-        <div className="flex flex-col justify-center items-center row-start-2 col-start-3 space-y-2">
-          <span className="relative font-urbanist font-bold text-[64px] text-orange-500 leading-none w-[157px] h-[109px]">
-            <span className="absolute  top-[6px] text-gray-600">
+        <div className="flex flex-col justify-center items-center row-start-2 col-start-3 space-y-3">
+          <span className="relative font-urbanist font-bold 
+            text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[64px] 
+            text-orange-500 leading-none">
+            <span className="absolute left-[4px] top-[4px] text-gray-600">
               {counts[3]}+
             </span>
             <span className="relative">{counts[3]}+</span>
           </span>
-          <span className="text-white font-urbanist font-semibold text-[24px] leading-none w-[186px] h-[29px]">
-            Team Strength
+<span
+  className="text-white font-urbanist font-semibold 
+  text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 
+  leading-none px-[12px] sm:px-[16px] text-center"
+>
+  Team Strength
           </span>
         </div>
 

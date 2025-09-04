@@ -16,16 +16,47 @@ import About from './components/About';
 const App = () => {
   return (
     <div className="bg-container">
+      {/* Hero & Navbar */}
       <Hero />
-      <Logo />
-      <Slide />
-      <About  />
-      <Strength />
-      <Counting />
-      <Service />
-      <Testimonials />
-      <Blog />
-      <Footer />
+
+      {/* Sections with IDs for smooth scroll */}
+      <section id="logo">
+        <Logo />
+      </section>
+
+      <section id="portfolio">
+        <Slide />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="strength">
+        <Strength />
+      </section>
+
+      <section id="careers">
+        <Counting />
+      </section>
+
+      <section id="services">
+        <Service />
+      </section>
+
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+
+      <section id="blog">
+        <Blog />
+      </section>
+
+      <section id="contact">
+        <Footer />
+      </section>
+
+      {/* Toast notifications */}
       <ToastContainer 
         position="top-right"
         autoClose={3000}
@@ -39,6 +70,6 @@ const App = () => {
       />
     </div>
   );
-}
+};
 
 export default App;
