@@ -15,11 +15,11 @@ import About from './components/About';
 
 const App = () => {
   return (
-    <>
+    <div className="bg-container">
       <Hero />
       <Logo />
       <Slide />
-      <About />
+      <About  />
       <Strength />
       <Counting />
       <Service />
@@ -37,7 +37,7 @@ const App = () => {
         draggable
         pauseOnHover
       />
-    </>
+    </div>
   );
 }
 

@@ -4,27 +4,30 @@ import humanicon from "../assets/humanicon.png";
 
 const About = () => {
   return (
-    <section className="w-[100vw] h-[566px] mx-auto relative">
-      {/* Background split into 2 rectangles */}
-      <div className="absolute top-0 left-0 w-full h-[92px] bg-black"></div>
-      <div className="absolute top-[92px] left-0 w-full h-[474px] bg-[#172933]"></div>
+  <section className="w-full min-h-[566px] relative overflow-hidden">
+  {/* Background split into 2 rectangles */}
+  <div className="absolute top-0 left-0 w-full h-[92px] bg-black"></div>
+  <div className="absolute top-[92px] left-0 w-full h-[474px] bg-[#172933]"></div>
 
       {/* Content */}
-      <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-center justify-center px-6 md:px-[120px] gap-8 md:gap-12 py-6 md:py-0">
-        
+      <div
+        className="relative z-10 w-full h-full flex flex-col md:flex-row items-center justify-center 
+                   px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 2xl:px-40 
+                   gap-8 md:gap-12 py-6 md:py-0"
+      >
         {/* Left Side - Curve Image */}
-        <div className="flex justify-center md:justify-start">
+        <div className="flex justify-center md:justify-start w-full md:w-auto">
           <img
             src={curveone}
             alt="curve design"
-            className="w-[80%] max-w-[350px] md:w-[517px] md:h-[566px] object-cover 
+            className="w-full max-w-[320px] sm:max-w-[400px] md:max-w-[517px] h-auto object-cover
                        rounded-tl-[30px] rounded-tr-[30px] rounded-br-[150px] rounded-bl-[150px]
                        md:rounded-tl-[44px] md:rounded-tr-[46px] md:rounded-br-[244px] md:rounded-bl-[244px]"
           />
         </div>
 
         {/* Right Side - Content */}
-        <div className="max-w-full md:max-w-[617px] text-white flex flex-col gap-6 text-center md:text-left">
+        <div className="w-full max-w-full md:max-w-[617px] text-white flex flex-col gap-6 text-center md:text-left">
           <h2 className="text-2xl md:text-[28px] font-semibold text-[#FF5733]">
             About Us
           </h2>
@@ -39,7 +42,10 @@ const About = () => {
           </p>
 
           {/* Icon Box */}
-          <div className="flex flex-col sm:flex-row items-center gap-4 bg-white shadow-md rounded-xl p-4 w-full sm:w-[555px] mx-auto md:mx-0">
+          <div
+            className="flex flex-col sm:flex-row items-center gap-4 bg-white shadow-md rounded-xl p-4 
+                       w-full max-w-full sm:max-w-[555px] mx-auto md:mx-0"
+          >
             {/* Human Icon with off-white box */}
             <div className="bg-[#F9FAFB] w-[70px] h-[70px] flex items-center justify-center rounded-[10px]">
               <img
