@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Navbar */}
       <nav className="absolute top-0 left-0 w-full px-6 md:px-12 py-4 flex items-center justify-between bg-black/40 z-50">
         {/* Brand */}
-        <div className="text-2xl font-bold text-orange-500">Aquila</div>
+        <div className="text-3xl font-semibold text-orange-500">Aquila</div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-10 text-sm font-medium">
@@ -65,7 +65,7 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative pt-[120px] md:pt-[140px] lg:pt-[160px] flex flex-col items-center justify-center text-center px-6 py-12 z-10">
-        <span className="bg-white/20 text-orange-400 px-6 py-2 rounded-full text-xs sm:text-sm md:text-base font-semibold tracking-wide">
+        <span className="bg-white text-orange-400 px-6 py-2 rounded-full text-xs sm:text-sm md:text-base font-semibold tracking-wide">
           INNOVATING EXPERIENCES, INSPIRING ENGAGEMENT
         </span>
 

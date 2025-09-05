@@ -31,8 +31,16 @@ import exp14 from './14.png'
 import exp20 from './20.png'
 import count500 from './500.png'
 import count700 from './700.png'
+import bg2 from './bg2.png'
+import aeroplane from './aeroplane.png'
+import setting from './setting.png'
+import hook from './hook.png'
 
 const assets = {
+    bg2,
+    aeroplane,
+    setting,
+    hook,
     blog1p,
     blog2p,
     cureveone,

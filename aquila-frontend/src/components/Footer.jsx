@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import linkedin from "../assets/linkedin.png";
 import insta from "../assets/insta.png";
 import twitter from "../assets/twiter.png";
@@ -8,6 +8,21 @@ import phone from "../assets/Phone.png";
 import location from "../assets/location.png";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubscribe = () => {
+    if (!email) {
+      setMessage("❌ Please enter your email.");
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      setMessage("⚠️ Please enter a valid email.");
+    } else {
+      setMessage("✅ Thank you for subscribing!");
+      setEmail(""); // clear input after subscribe
+      // 👉 here you can call API or backend to save email
+    }
+  };
+
   return (
     <footer className="w-full">
       {/* Top Section */}
@@ -21,11 +36,13 @@ const Footer = () => {
           <p className="text-gray-300 text-sm leading-relaxed max-w-[260px]">
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at
           </p>
-          <div className="flex space-x-4">
-            <img src={linkedin} alt="LinkedIn" className="w-10 h-10 rounded-lg bg-white p-2 hover:scale-110 transition" />
-            <img src={insta} alt="Instagram" className="w-10 h-10 rounded-lg bg-white p-2 hover:scale-110 transition" />
-            <img src={facebook} alt="Facebook" className="w-10 h-10 rounded-lg bg-white p-2 hover:scale-110 transition" />
-            <img src={twitter} alt="Twitter" className="w-10 h-10 rounded-lg bg-white p-2 hover:scale-110 transition" />
+
+          {/* Social Icons */}
+          <div className="flex w-[260px] justify-between">
+            <img src={linkedin} alt="LinkedIn" className="w-[50px] h-[50px] rounded-[10px] bg-white p-2 hover:scale-110 transition" />
+            <img src={insta} alt="Instagram" className="w-[50px] h-[50px] rounded-[10px] bg-white p-2 hover:scale-110 transition" />
+            <img src={facebook} alt="Facebook" className="w-[50px] h-[50px] rounded-[10px] bg-white p-2 hover:scale-110 transition" />
+            <img src={twitter} alt="Twitter" className="w-[50px] h-[50px] rounded-[10px] bg-white p-2 hover:scale-110 transition" />
           </div>
         </div>
 
@@ -79,15 +96,24 @@ const Footer = () => {
           <p className="text-gray-300 text-sm mb-4">
             Stay updated with the latest listings and rental tips.
           </p>
+
+          {/* Input + Button */}
           <div className="flex flex-col space-y-4">
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Email Address"
-              className="w-full px-4 py-2 rounded-lg border border-[#E67E5F] bg-transparent text-sm text-white placeholder-gray-400 focus:outline-none"
+              className="w-[275px] h-[48px] px-4 rounded-[47px] border border-[#E26d5A] bg-transparent text-sm text-white placeholder-gray-400 focus:outline-none"
             />
-            <button className="bg-[#E67E5F] hover:bg-[#d66b4c] text-white font-medium py-2 px-6 rounded-lg transition">
+            <button
+              onClick={handleSubscribe}
+              className="w-[275px] h-[48px] rounded-[47px] bg-[#E67E5F] hover:bg-[#d66b4c] text-white font-medium transition"
+            >
               Subscribe
             </button>
+
+            {message && <p className="text-sm mt-2">{message}</p>}
           </div>
         </div>
       </div>
